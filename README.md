@@ -6,6 +6,8 @@ Tampilannya pakai palet ungu, oranye, hijau, dan kuning, ditambah logo resmi sek
 
 Websitenya statis, cuma pakai HTML, CSS, sama JavaScript biasa tanpa framework. Library animasi, galeri, dan petanya diambil lewat CDN.
 
+Link website: https://yahya-nz.github.io/Website-SMA-Kolese-Loyola/
+
 Catatan: ini project portofolio, bukan website resmi sekolah. Info resmi ada di [loyola-smg.sch.id](https://www.loyola-smg.sch.id).
 
 ## Tampilan
