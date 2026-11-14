@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SMA Kolese Loyola Semarang</title>
+  <meta name="description" content="Website profil SMA Kolese Loyola Semarang, sekolah Katolik Jesuit sejak 1949: nilai 4C, sejarah, prestasi siswa, fasilitas, dan kegiatan sekolah.">
+  <meta name="theme-color" content="#522795">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SMA Kolese Loyola Semarang">
+  <meta property="og:description" content="Belajar. Peduli. Bertumbuh. Sekolah Katolik Jesuit di Semarang sejak 1949.">
+  <meta property="og:image" content="https://yahya-nz.github.io/Website-SMA-Kolese-Loyola/screenshot/01-beranda.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      var t = null;
+      d.classList.add('js');
+      try { t = localStorage.getItem('loyola-tema'); } catch (e) {}
+      if (t === 'gelap' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) d.setAttribute('data-theme', 'dark');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('no-motion');
+      try {
+        if (sessionStorage.getItem('loyola-pindah') === '1') d.classList.add('is-arriving');
+        else if (!sessionStorage.getItem('loyola-sudah')) d.classList.add('is-first');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-page="beranda">
+
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <img class="preloader__logo" src="assets/img/logo-loyola.png" alt="">
+      <p class="preloader__name">SMA Kolese Loyola</p>
+      <p class="preloader__sub">Semarang &middot; sejak 1949</p>
+    </div>
+    <p class="preloader__count"><span>0</span></p>
+    <div class="preloader__bar"><i></i></div>
+  </div>
+  <div class="page-transition" aria-hidden="true"><img src="assets/img/logo-loyola.png" alt=""></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"><span>Lihat</span></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand" aria-label="SMA Kolese Loyola, ke beranda">
+        <img src="assets/img/logo-loyola.png" alt="" width="42" height="53">
+        <span class="brand__text">Kolese Loyola<small>SMA &middot; SEMARANG</small></span>
+      </a>
+      <nav class="nav" aria-label="Menu utama">
+        <span class="nav__pill" aria-hidden="true"></span>
+        <a href="index.html" class="is-active" aria-current="page">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <a href="prestasi.html">Prestasi</a>
+        <a href="fasilitas.html">Fasilitas</a>
+        <a href="kegiatan.html">Kegiatan</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Ganti mode gelap atau terang"><i class="ph ph-moon"></i><i class="ph ph-sun"></i></button>
+        <a href="kontak.html" class="btn btn--primary btn--sm header-cta">Hubungi kami</a>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-hp"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="menu-hp">
+    <nav aria-label="Menu HP">
+      <a href="index.html" class="mobile-menu__link is-active"><small>01</small>Beranda</a>
+      <a href="profil.html" class="mobile-menu__link"><small>02</small>Profil</a>
+      <a href="prestasi.html" class="mobile-menu__link"><small>03</small>Prestasi</a>
+      <a href="fasilitas.html" class="mobile-menu__link"><small>04</small>Fasilitas</a>
+      <a href="kegiatan.html" class="mobile-menu__link"><small>05</small>Kegiatan</a>
+      <a href="kontak.html" class="mobile-menu__link"><small>06</small>Kontak</a>
+    </nav>
+    <div class="mobile-menu__foot">
+      <p>Jl. Karanganyar No. 37, Semarang</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/smakoleseloyola" target="_blank" rel="noopener" aria-label="Instagram SMA Kolese Loyola"><i class="ph ph-instagram-logo"></i></a>
+        <a href="https://www.youtube.com/c/SMAKoleseLoyolaSemarang" target="_blank" rel="noopener" aria-label="YouTube SMA Kolese Loyola"><i class="ph ph-youtube-logo"></i></a>
+        <a href="https://www.loyola-smg.sch.id" target="_blank" rel="noopener" aria-label="Website resmi sekolah"><i class="ph ph-globe-simple"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <main id="konten">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <span class="blob blob--yellow"></span>
+        <span class="blob blob--purple"></span>
+        <span class="dots"></span>
+      </div>
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow hero-anim"><span class="eyebrow__dot"></span>Sekolah Katolik Jesuit sejak 1949</p>
+          <h1 class="hero__title">
+            <span class="line"><span class="line__inner">SMA Kolese</span></span>
+            <span class="line"><span class="line__inner"><span class="hero__word">Loyola<svg class="squiggle" viewBox="0 0 300 26" preserveAspectRatio="none" aria-hidden="true"><path d="M4 16 C 46 4, 78 24, 118 14 S 190 3, 230 13 S 284 22, 296 9"/></svg></span></span></span>
+          </h1>
+          <p class="hero__tagline">
+            <span class="tg tg--purple">Belajar.</span>
+            <span class="tg tg--orange">Peduli.</span>
+            <span class="tg tg--green">Bertumbuh.</span>
+          </p>
+          <p class="hero__lead hero-anim">Sekolah Katolik bercorak Jesuit di Jalan Karanganyar, Semarang. Sejak 1949, Loyola mendidik kaum muda menjadi pribadi yang cerdas, berhati nurani, dan peduli pada sesama.</p>
+          <div class="hero__actions hero-anim">
+            <a href="profil.html" class="btn btn--primary" data-magnetic>Kenali Loyola <i class="ph ph-arrow-right"></i></a>
+            <a href="#nilai-4c" class="btn btn--ghost" data-magnetic>Nilai 4C <i class="ph ph-arrow-down"></i></a>
+          </div>
+          <ul class="hero__checks hero-anim">
+            <li><i class="ph-fill ph-check-circle"></i>Pendidikan khas Jesuit</li>
+            <li><i class="ph-fill ph-check-circle"></i>Nilai 4C</li>
+            <li><i class="ph-fill ph-check-circle"></i>20 fasilitas belajar</li>
+          </ul>
+        </div>
+
+        <div class="hero__visual">
+          <div class="arch">
+            <div class="arch__frame">
+              <img class="arch__img" src="assets/img/gedung-loyola.jpg" alt="Gedung depan SMA Kolese Loyola di Jalan Karanganyar 37 Semarang">
+            </div>
+          </div>
+          <div class="float-card float-card--osn">
+            <span class="float-card__icon tint-yellow"><i class="ph-fill ph-medal"></i></span>
+            <span><b>Medali Perak</b><small>OSN Informatika 2025</small></span>
+          </div>
+          <div class="float-card float-card--year">
+            <b data-count="77">77</b>
+            <small>tahun berkarya</small>
+          </div>
+          <div class="badge-spin" aria-hidden="true">
+            <svg viewBox="0 0 200 200">
+              <defs><path id="lingkar-teks" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+              <text><textPath href="#lingkar-teks">AD MAIOREM DEI GLORIAM &#8226; SEJAK 1949 &#8226; </textPath></text>
+            </svg>
+            <img src="assets/img/logo-loyola.png" alt="">
+          </div>
+          <span class="shape shape--ring" aria-hidden="true"></span>
+          <span class="shape shape--half" aria-hidden="true"></span>
+          <span class="shape shape--star" aria-hidden="true"></span>
+        </div>
+      </div>
+      <a href="#nilai-4c" class="scroll-hint" aria-label="Gulir ke bagian nilai 4C"><span></span></a>
+    </section>
+
+    <!-- Pita berjalan -->
+    <div class="bands" aria-hidden="true">
+      <div class="marquee">
+        <div class="marquee__track">
+          <div class="marquee__group">
+            <span>Competence</span><i class="marquee__dot"></i><span>Conscience</span><i class="marquee__dot"></i>
+            <span>Compassion</span><i class="marquee__dot"></i><span>Commitment</span><i class="marquee__dot"></i>
+            <span>Competence</span><i class="marquee__dot"></i><span>Conscience</span><i class="marquee__dot"></i>
+            <span>Compassion</span><i class="marquee__dot"></i><span>Commitment</span><i class="marquee__dot"></i>
+          </div>
+          <div class="marquee__group">
+            <span>Competence</span><i class="marquee__dot"></i><span>Conscience</span><i class="marquee__dot"></i>
+            <span>Compassion</span><i class="marquee__dot"></i><span>Commitment</span><i class="marquee__dot"></i>
+            <span>Competence</span><i class="marquee__dot"></i><span>Conscience</span><i class="marquee__dot"></i>
+            <span>Compassion</span><i class="marquee__dot"></i><span>Commitment</span><i class="marquee__dot"></i>
+          </div>
+        </div>
+      </div>
+      <div class="marquee marquee--alt">
+        <div class="marquee__track">
+          <div class="marquee__group">
+            <span>Ad Maiorem Dei Gloriam</span><i class="marquee__dot"></i><span>Men and Women for Others</span><i class="marquee__dot"></i><span>Sejak 1949</span><i class="marquee__dot"></i>
+            <span>Ad Maiorem Dei Gloriam</span><i class="marquee__dot"></i><span>Men and Women for Others</span><i class="marquee__dot"></i><span>Sejak 1949</span><i class="marquee__dot"></i>
+          </div>
+          <div class="marquee__group">
+            <span>Ad Maiorem Dei Gloriam</span><i class="marquee__dot"></i><span>Men and Women for Others</span><i class="marquee__dot"></i><span>Sejak 1949</span><i class="marquee__dot"></i>
+            <span>Ad Maiorem Dei Gloriam</span><i class="marquee__dot"></i><span>Men and Women for Others</span><i class="marquee__dot"></i><span>Sejak 1949</span><i class="marquee__dot"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nilai 4C -->
+    <section class="section" id="nilai-4c">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow" data-reveal>Nilai pendidikan Jesuit</p>
+          <h2 class="title" data-split>Empat nilai yang membentuk <span class="hl">siswa Loyola</span></h2>
+          <p class="lead" data-reveal>Nilai 4C menjadi arah pendidikan di Kolese Loyola: cakap, berhati nurani, berbela rasa, dan setia pada kebaikan.</p>
+        </div>
+        <div class="c4-grid">
+          <div data-reveal>
+            <article class="c4-card" data-tilt>
+              <span class="c4-card__num">01</span>
+              <span class="c4-card__icon"><i class="ph-fill ph-lightbulb"></i></span>
+              <h3>Competence</h3>
+              <p class="c4-card__id">Cakap</p>
+              <p>Cakap dan unggul dalam ilmu serta keterampilan, selalu berusaha menjadi lebih baik.</p>
+            </article>
+          </div>
+          <div data-reveal>
+            <article class="c4-card c4-card--orange" data-tilt>
+              <span class="c4-card__num">02</span>
+              <span class="c4-card__icon"><i class="ph-fill ph-compass"></i></span>
+              <h3>Conscience</h3>
+              <p class="c4-card__id">Berhati nurani</p>
+              <p>Punya hati nurani yang jernih untuk memilih yang benar dan baik.</p>
+            </article>
+          </div>
+          <div data-reveal>
+            <article class="c4-card c4-card--green" data-tilt>
+              <span class="c4-card__num">03</span>
+              <span class="c4-card__icon"><i class="ph-fill ph-hand-heart"></i></span>
+              <h3>Compassion</h3>
+              <p class="c4-card__id">Berbela rasa</p>
+              <p>Peka dan berbela rasa pada sesama, terutama yang lemah dan tersisih.</p>
+            </article>
+          </div>
+          <div data-reveal>
+            <article class="c4-card c4-card--yellow" data-tilt>
+              <span class="c4-card__num">04</span>
+              <span class="c4-card__icon"><i class="ph-fill ph-flag-banner"></i></span>
+              <h3>Commitment</h3>
+              <p class="c4-card__id">Setia berjuang</p>
+              <p>Setia dan bertanggung jawab memperjuangkan kebaikan dan keadilan.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sejarah singkat -->
+    <section class="section section--tint" id="sejarah">
+      <div class="container about">
+        <div class="about__media">
+          <div class="about__frame" data-reveal="clip">
+            <img src="assets/img/lsc.jpg" alt="Gedung Loyola Student Center dengan atap runcing dan halaman rumput" data-parallax="6" loading="lazy">
+          </div>
+          <div class="about__stamp" data-reveal="scale"><b>1949</b><span>Berdiri di Semarang</span></div>
+        </div>
+        <div class="about__text">
+          <p class="eyebrow" data-reveal>Sejarah singkat</p>
+          <h2 class="title" data-split>Berawal dari Kalisari, tumbuh di Karanganyar</h2>
+          <p class="lead" data-reveal>Pada Agustus 1949, Pater Jan van Waayenburg, SJ mendirikan SMA Canisius VHO di Bruderan Kalisari, Semarang. Setahun kemudian sekolah ini berganti nama menjadi Kolese Loyola dan pindah ke Jalan Karanganyar, tempatnya berdiri sampai sekarang.</p>
+          <p data-reveal>Nama Loyola diambil dari santo pelindung sekolah, Santo Ignatius Loyola, pendiri Serikat Yesus (Jesuit). Sejak 1968 Loyola menerima siswi, dan pada 2024 merayakan ulang tahun ke-75.</p>
+          <div class="stats" data-reveal>
+            <div class="stat"><b data-count="1949" data-from="1900">1949</b><span>tahun berdiri</span></div>
+            <div class="stat"><b data-count="77">77</b><span>tahun berkarya</span></div>
+            <div class="stat"><b data-count="20">20</b><span>fasilitas</span></div>
+          </div>
+          <div data-reveal>
+            <a href="profil.html" class="btn btn--primary" data-magnetic>Baca sejarah lengkap <i class="ph ph-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Jelajahi -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow" data-reveal>Jelajahi</p>
+            <h2 class="title" data-split>Ada apa saja di Loyola?</h2>
+          </div>
+          <p class="lead" data-reveal>Arahkan kursor ke tiap panel untuk melihat lebih dekat, lalu klik untuk membuka halamannya.</p>
+        </div>
+        <div class="explore" data-reveal>
+          <a href="prestasi.html" class="explore__item is-active">
+            <img src="assets/img/basket-dbl.jpg" alt="" loading="lazy">
+            <span class="explore__go" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+            <div class="explore__body">
+              <span class="explore__num">01</span>
+              <h3>Prestasi</h3>
+              <p>Dari medali perak OSN Informatika sampai tim basket putri di babak Fantastic Four Honda DBL.</p>
+            </div>
+          </a>
+          <a href="fasilitas.html" class="explore__item">
+            <img src="assets/img/kapel.jpg" alt="" loading="lazy">
+            <span class="explore__go" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+            <div class="explore__body">
+              <span class="explore__num">02</span>
+              <h3>Fasilitas</h3>
+              <p>Kapel, laboratorium, ruang cinema, aula, sampai gedung Loyola Student Center.</p>
+            </div>
+          </a>
+          <a href="kegiatan.html" class="explore__item">
+            <img src="assets/img/soepra-fest.jpg" alt="" loading="lazy">
+            <span class="explore__go" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+            <div class="explore__body">
+              <span class="explore__num">03</span>
+              <h3>Kegiatan</h3>
+              <p>Class meeting, Natal bersama, BIDIKTI, sampai konser Gamelan Soepra.</p>
+            </div>
+          </a>
+          <a href="profil.html" class="explore__item">
+            <img src="assets/img/dkkl.jpg" alt="" loading="lazy">
+            <span class="explore__go" aria-hidden="true"><i class="ph ph-arrow-up-right"></i></span>
+            <div class="explore__body">
+              <span class="explore__num">04</span>
+              <h3>Profil</h3>
+              <p>Sejarah sejak 1949, Santo Ignatius Loyola, dan makna logo sekolah.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Momen -->
+    <section class="section section--flush-top">
+      <div class="container section-head section-head--split">
+        <div>
+          <p class="eyebrow" data-reveal>Momen di Loyola</p>
+          <h2 class="title" data-split>Belajar tidak berhenti di ruang kelas</h2>
+        </div>
+        <div data-reveal>
+          <a href="kegiatan.html" class="btn btn--ghost">Lihat semua kegiatan <i class="ph ph-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="photo-strip" data-reveal>
+        <div class="photo-strip__track">
+          <figure><img src="assets/img/classmeeting.jpg" alt="Siswa Loyola berfoto bersama saat class meeting" loading="lazy"><figcaption>Class Meeting</figcaption></figure>
+          <figure><img src="assets/img/natal.jpg" alt="Perayaan Natal Komunitas Loyola" loading="lazy"><figcaption>Perayaan Natal</figcaption></figure>
+          <figure><img src="assets/img/malam-sosialisasi.jpg" alt="Malam sosialisasi di aula sekolah" loading="lazy"><figcaption>Malam Sosialisasi</figcaption></figure>
+          <figure><img src="assets/img/dkkl.jpg" alt="Pengurus Dewan Keluarga Kolese Loyola" loading="lazy"><figcaption>DKKL</figcaption></figure>
+          <figure><img src="assets/img/bidikti-2023.jpg" alt="Siswa mengunjungi stan kampus di BIDIKTI 2023" loading="lazy"><figcaption>BIDIKTI 2023</figcaption></figure>
+          <figure><img src="assets/img/paduan-suara.jpg" alt="Paduan Suara Loyola di atas panggung" loading="lazy"><figcaption>Paduan Suara</figcaption></figure>
+          <figure aria-hidden="true"><img src="assets/img/classmeeting.jpg" alt="" loading="lazy"><figcaption>Class Meeting</figcaption></figure>
+          <figure aria-hidden="true"><img src="assets/img/natal.jpg" alt="" loading="lazy"><figcaption>Perayaan Natal</figcaption></figure>
+          <figure aria-hidden="true"><img src="assets/img/malam-sosialisasi.jpg" alt="" loading="lazy"><figcaption>Malam Sosialisasi</figcaption></figure>
+          <figure aria-hidden="true"><img src="assets/img/dkkl.jpg" alt="" loading="lazy"><figcaption>DKKL</figcaption></figure>
+          <figure aria-hidden="true"><img src="assets/img/bidikti-2023.jpg" alt="" loading="lazy"><figcaption>BIDIKTI 2023</figcaption></figure>
+          <figure aria-hidden="true"><img src="assets/img/paduan-suara.jpg" alt="" loading="lazy"><figcaption>Paduan Suara</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ajakan -->
+    <section class="section section--flush-top">
+      <div class="container">
+        <div class="cta" data-reveal="scale">
+          <span class="cta__shape cta__shape--1" aria-hidden="true"></span>
+          <span class="cta__shape cta__shape--2" aria-hidden="true"></span>
+          <span class="cta__shape cta__shape--3" aria-hidden="true"></span>
+          <span class="cta__shape cta__shape--4" aria-hidden="true"></span>
+          <p class="eyebrow eyebrow--light">Men and women for others</p>
+          <h2 data-split>Siap bertumbuh bersama Loyola?</h2>
+          <p>Belajar bukan hanya untuk diri sendiri, tetapi juga untuk sesama. Kenali Loyola lebih dekat atau hubungi sekolah langsung.</p>
+          <div class="cta__actions">
+            <a href="kontak.html" class="btn btn--yellow" data-magnetic>Hubungi kami <i class="ph ph-arrow-right"></i></a>
+            <a href="https://www.loyola-smg.sch.id" target="_blank" rel="noopener" class="btn btn--outline-light">Website resmi <i class="ph ph-arrow-up-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="index.html" class="brand brand--light" aria-label="SMA Kolese Loyola, ke beranda">
+            <img src="assets/img/logo-loyola.png" alt="" width="42" height="53">
+            <span class="brand__text">Kolese Loyola<small>SMA &middot; SEMARANG</small></span>
+          </a>
+          <p>Sekolah Katolik Jesuit di Jalan Karanganyar 37, Semarang. Mendidik kaum muda lewat nilai Competence, Conscience, Compassion, dan Commitment sejak 1949.</p>
+          <div class="socials">
+            <a href="https://www.instagram.com/smakoleseloyola" target="_blank" rel="noopener" aria-label="Instagram SMA Kolese Loyola"><i class="ph ph-instagram-logo"></i></a>
+            <a href="https://www.youtube.com/c/SMAKoleseLoyolaSemarang" target="_blank" rel="noopener" aria-label="YouTube SMA Kolese Loyola"><i class="ph ph-youtube-logo"></i></a>
+            <a href="https://www.loyola-smg.sch.id" target="_blank" rel="noopener" aria-label="Website resmi sekolah"><i class="ph ph-globe-simple"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Jelajahi</h4>
+          <a href="index.html">Beranda</a>
+          <a href="profil.html">Profil</a>
+          <a href="prestasi.html">Prestasi</a>
+          <a href="fasilitas.html">Fasilitas</a>
+          <a href="kegiatan.html">Kegiatan</a>
+          <a href="kontak.html">Kontak</a>
+        </div>
+        <div class="footer__col">
+          <h4>Kontak</h4>
+          <p>Jl. Karanganyar No. 37<br>Semarang 50135, Jawa Tengah</p>
+          <a href="tel:+62243546945">(024) 3546945</a>
+          <a href="mailto:koleseloyola@loyola-smg.sch.id">koleseloyola@loyola-smg.sch.id</a>
+        </div>
+      </div>
+      <p class="footer__big" aria-hidden="true">Kolese Loyola</p>
+      <div class="footer__bottom">
+        <p>Ad Maiorem Dei Gloriam &middot; <span data-year>2026</span></p>
+        <p>Project portofolio oleh <a href="https://github.com/Yahya-nz" target="_blank" rel="noopener">Yahya-nz</a>, bukan website resmi sekolah. <a href="kontak.html#sumber-foto">Sumber foto</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Kembali ke atas">
+    <svg viewBox="0 0 58 58" aria-hidden="true"><circle cx="29" cy="29" r="26"></circle></svg>
+    <i class="ph ph-arrow-up"></i>
+  </button>
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/beranda.js"></script>
+</body>
+</html>

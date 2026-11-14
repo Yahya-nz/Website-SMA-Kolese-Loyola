@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Fasilitas | SMA Kolese Loyola Semarang</title>
+  <meta name="description" content="Fasilitas SMA Kolese Loyola Semarang: Loyola Student Center, kapel, aula, laboratorium, ruang cinema, ruang kelas, dan kantin.">
+  <meta name="theme-color" content="#522795">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fasilitas | SMA Kolese Loyola Semarang">
+  <meta property="og:description" content="Fasilitas SMA Kolese Loyola Semarang: Loyola Student Center, kapel, aula, laboratorium, ruang cinema, ruang kelas, dan kantin.">
+  <meta property="og:image" content="https://yahya-nz.github.io/Website-SMA-Kolese-Loyola/screenshot/01-beranda.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      var t = null;
+      d.classList.add('js');
+      try { t = localStorage.getItem('loyola-tema'); } catch (e) {}
+      if (t === 'gelap' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) d.setAttribute('data-theme', 'dark');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('no-motion');
+      try {
+        if (sessionStorage.getItem('loyola-pindah') === '1') d.classList.add('is-arriving');
+        else if (!sessionStorage.getItem('loyola-sudah')) d.classList.add('is-first');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-page="fasilitas">
+
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <img class="preloader__logo" src="assets/img/logo-loyola.png" alt="">
+      <p class="preloader__name">SMA Kolese Loyola</p>
+      <p class="preloader__sub">Semarang &middot; sejak 1949</p>
+    </div>
+    <p class="preloader__count"><span>0</span></p>
+    <div class="preloader__bar"><i></i></div>
+  </div>
+  <div class="page-transition" aria-hidden="true"><img src="assets/img/logo-loyola.png" alt=""></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"><span>Lihat</span></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand" aria-label="SMA Kolese Loyola, ke beranda">
+        <img src="assets/img/logo-loyola.png" alt="" width="42" height="53">
+        <span class="brand__text">Kolese Loyola<small>SMA &middot; SEMARANG</small></span>
+      </a>
+      <nav class="nav" aria-label="Menu utama">
+        <span class="nav__pill" aria-hidden="true"></span>
+        <a href="index.html">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <a href="prestasi.html">Prestasi</a>
+        <a href="fasilitas.html" class="is-active" aria-current="page">Fasilitas</a>
+        <a href="kegiatan.html">Kegiatan</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Ganti mode gelap atau terang"><i class="ph ph-moon"></i><i class="ph ph-sun"></i></button>
+        <a href="kontak.html" class="btn btn--primary btn--sm header-cta">Hubungi kami</a>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-hp"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="menu-hp">
+    <nav aria-label="Menu HP">
+      <a href="index.html" class="mobile-menu__link"><small>01</small>Beranda</a>
+      <a href="profil.html" class="mobile-menu__link"><small>02</small>Profil</a>
+      <a href="prestasi.html" class="mobile-menu__link"><small>03</small>Prestasi</a>
+      <a href="fasilitas.html" class="mobile-menu__link is-active" aria-current="page"><small>04</small>Fasilitas</a>
+      <a href="kegiatan.html" class="mobile-menu__link"><small>05</small>Kegiatan</a>
+      <a href="kontak.html" class="mobile-menu__link"><small>06</small>Kontak</a>
+    </nav>
+    <div class="mobile-menu__foot">
+      <p>Jl. Karanganyar No. 37, Semarang</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/smakoleseloyola" target="_blank" rel="noopener" aria-label="Instagram SMA Kolese Loyola"><i class="ph ph-instagram-logo"></i></a>
+        <a href="https://www.youtube.com/c/SMAKoleseLoyolaSemarang" target="_blank" rel="noopener" aria-label="YouTube SMA Kolese Loyola"><i class="ph ph-youtube-logo"></i></a>
+        <a href="https://www.loyola-smg.sch.id" target="_blank" rel="noopener" aria-label="Website resmi sekolah"><i class="ph ph-globe-simple"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <main id="konten">
+
+    <!-- Hero halaman -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero__box">
+          <span class="shape shape--ring" aria-hidden="true"></span>
+          <span class="shape shape--half" aria-hidden="true"></span>
+          <div>
+            <nav class="crumbs ph-anim" aria-label="Breadcrumb"><a href="index.html">Beranda</a><i class="ph ph-caret-right"></i><span>Fasilitas</span></nav>
+            <p class="eyebrow eyebrow--light ph-anim">Fasilitas sekolah</p>
+            <h1 class="page-title" data-split="intro">Ruang untuk <em>Bertumbuh</em></h1>
+            <p class="page-lead ph-anim">Tempat untuk belajar, berdoa, berkarya, dan bermain. Ini fasilitas yang bisa dinikmati siswa SMA Kolese Loyola setiap hari.</p>
+          </div>
+          <div class="page-hero__visual">
+            <div class="page-hero__arch"><img src="assets/img/aula-belarminus.jpg" alt="Aula Belarminus dengan lapangan basket di dalam ruangan"></div>
+            <div class="page-hero__chip page-hero__chip--a"><i class="ph-fill ph-buildings tint-yellow"></i><span>20 fasilitas<small>untuk belajar dan berkarya</small></span></div>
+            <div class="page-hero__chip page-hero__chip--b"><i class="ph-fill ph-flask tint-green"></i><span>4 laboratorium<small>IPA dan komputer</small></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gedung unggulan -->
+    <section class="section">
+      <div class="container feature">
+        <div class="feature__media" data-reveal="clip">
+          <img src="assets/img/lsc.jpg" alt="Gedung Loyola Student Center yang modern dengan atap runcing dan dinding kaca" data-parallax="6" loading="lazy">
+        </div>
+        <div class="feature__card" data-reveal="right">
+          <span class="badge tint-yellow"><i class="ph-fill ph-star"></i>Gedung kebanggaan</span>
+          <h2>Loyola Student Center</h2>
+          <p>Gedung modern dengan atap runcing dan dinding kaca yang menjadi ikon baru Loyola. Sesuai namanya, gedung ini menjadi pusat kegiatan siswa.</p>
+          <p>Di depannya ada halaman rumput yang luas dan teduh, tempat siswa bisa berkumpul.</p>
+          <a href="assets/img/lsc.jpg" class="btn btn--primary glightbox" data-gallery="lsc" data-title="Loyola Student Center" data-description="Gedung modern dengan atap runcing dan dinding kaca, pusat kegiatan siswa Loyola.">Lihat foto <i class="ph ph-arrows-out"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeri fasilitas -->
+    <section class="section section--tint" id="galeri">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow" data-reveal>Galeri fasilitas</p>
+            <h2 class="title" data-split>Tempat belajar, berdoa, <span class="hl">dan bermain</span></h2>
+          </div>
+          <p class="lead" data-reveal>Pilih kategori untuk menyaring, lalu klik kartunya untuk melihat foto lebih besar.</p>
+        </div>
+        <div class="toolbar" data-reveal>
+          <div class="filters" role="group" aria-label="Filter kategori fasilitas">
+            <button class="filter is-active" type="button" data-filter="semua">Semua</button>
+            <button class="filter" type="button" data-filter="ibadah">Ibadah</button>
+            <button class="filter" type="button" data-filter="belajar">Belajar</button>
+            <button class="filter" type="button" data-filter="olahraga">Olahraga</button>
+            <button class="filter" type="button" data-filter="multimedia">Multimedia</button>
+            <button class="filter" type="button" data-filter="santai">Santai</button>
+          </div>
+        </div>
+        <div class="fac-grid" data-reveal>
+          <a href="assets/img/kapel.jpg" class="fac glightbox" data-gallery="fasilitas" data-kategori="ibadah" data-cursor="lihat" data-title="Kapel Loyola" data-description="Tempat misa dan doa bersama, dengan bangku kayu panjang dan jendela kaca patri yang berwarna-warni.">
+            <img src="assets/img/kapel.jpg" alt="Bagian dalam Kapel Loyola dengan deretan bangku kayu dan jendela kaca patri" loading="lazy">
+            <span class="fac__zoom" aria-hidden="true"><i class="ph ph-arrows-out"></i></span>
+            <span class="fac__body">
+              <span class="badge">Ibadah</span>
+              <span class="fac__title">Kapel Loyola</span>
+              <span class="fac__desc">Tempat misa dan doa bersama, dengan bangku kayu panjang dan jendela kaca patri yang berwarna-warni.</span>
+            </span>
+          </a>
+          <a href="assets/img/aula-belarminus.jpg" class="fac glightbox" data-gallery="fasilitas" data-kategori="olahraga" data-cursor="lihat" data-title="Aula Belarminus" data-description="Aula serbaguna dengan lapangan basket dan futsal di dalam ruangan, juga dipakai untuk acara besar sekolah.">
+            <img src="assets/img/aula-belarminus.jpg" alt="Aula Belarminus dengan lapangan basket dan gawang futsal di dalam ruangan" loading="lazy">
+            <span class="fac__zoom" aria-hidden="true"><i class="ph ph-arrows-out"></i></span>
+            <span class="fac__body">
+              <span class="badge">Olahraga</span>
+              <span class="fac__title">Aula Belarminus</span>
+              <span class="fac__desc">Aula serbaguna dengan lapangan basket dan futsal di dalam ruangan, juga dipakai untuk acara besar sekolah.</span>
+            </span>
+          </a>
+          <a href="assets/img/lab-kimia.jpg" class="fac glightbox" data-gallery="fasilitas" data-kategori="belajar" data-cursor="lihat" data-title="Laboratorium Kimia" data-description="Tempat praktikum kimia dengan peralatan lengkap serta meja kerja yang bersih dan terang.">
+            <img src="assets/img/lab-kimia.jpg" alt="Praktikum di Laboratorium Kimia dengan labu takar berisi larutan merah muda" loading="lazy">
+            <span class="fac__zoom" aria-hidden="true"><i class="ph ph-arrows-out"></i></span>
+            <span class="fac__body">
+              <span class="badge">Belajar</span>
+              <span class="fac__title">Laboratorium Kimia</span>
+              <span class="fac__desc">Tempat praktikum kimia dengan peralatan lengkap serta meja kerja yang bersih dan terang.</span>
+            </span>
+          </a>
+          <a href="assets/img/ruang-cinema.jpg" class="fac glightbox" data-gallery="fasilitas" data-kategori="multimedia" data-cursor="lihat" data-title="Ruang Cinema" data-description="Ruang menonton dengan tempat duduk bertingkat, proyektor, dan pengeras suara untuk pemutaran film maupun presentasi.">
+            <img src="assets/img/ruang-cinema.jpg" alt="Ruang Cinema dengan tempat duduk bertingkat dan dinding merah" loading="lazy">
+            <span class="fac__zoom" aria-hidden="true"><i class="ph ph-arrows-out"></i></span>
+            <span class="fac__body">
+              <span class="badge">Multimedia</span>
+              <span class="fac__title">Ruang Cinema</span>
+              <span class="fac__desc">Ruang menonton dengan tempat duduk bertingkat, proyektor, dan pengeras suara untuk pemutaran film maupun presentasi.</span>
+            </span>
+          </a>
+          <a href="assets/img/ruang-kelas.jpg" class="fac glightbox" data-gallery="fasilitas" data-kategori="belajar" data-cursor="lihat" data-title="Ruang Kelas" data-description="Kelas yang terang dan sejuk ber-AC, dilengkapi proyektor, papan tulis, dan meja kursi kayu.">
+            <img src="assets/img/ruang-kelas.jpg" alt="Ruang kelas yang terang dengan meja kursi kayu, AC, dan papan tulis" loading="lazy">
+            <span class="fac__zoom" aria-hidden="true"><i class="ph ph-arrows-out"></i></span>
+            <span class="fac__body">
+              <span class="badge">Belajar</span>
+              <span class="fac__title">Ruang Kelas</span>
+              <span class="fac__desc">Kelas yang terang dan sejuk ber-AC, dilengkapi proyektor, papan tulis, dan meja kursi kayu.</span>
+            </span>
+          </a>
+          <a href="assets/img/kantin.jpg" class="fac glightbox" data-gallery="fasilitas" data-kategori="santai" data-cursor="lihat" data-title="Kantin Gaudens Cor Café" data-description="Kantin yang ceria dengan beberapa stan makanan, tempat siswa makan dan berkumpul saat jam istirahat.">
+            <img src="assets/img/kantin.jpg" alt="Suasana Kantin Gaudens Cor Café yang ramai siswa saat jam istirahat" loading="lazy">
+            <span class="fac__zoom" aria-hidden="true"><i class="ph ph-arrows-out"></i></span>
+            <span class="fac__body">
+              <span class="badge">Santai</span>
+              <span class="fac__title">Kantin Gaudens Cor Café</span>
+              <span class="fac__desc">Kantin yang ceria dengan beberapa stan makanan, tempat siswa makan dan berkumpul saat jam istirahat.</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fasilitas lainnya -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow" data-reveal>Masih ada lagi</p>
+          <h2 class="title" data-split>Fasilitas pendukung lainnya</h2>
+          <p class="lead" data-reveal>Selain yang di atas, Loyola juga punya fasilitas berikut untuk mendukung belajar, berolahraga, dan berkarya.</p>
+        </div>
+      </div>
+      <div class="chip-marquee" data-reveal>
+        <div class="chip-marquee__track">
+          <div class="chip-marquee__group">
+            <span class="fchip"><i class="ph-fill ph-dna"></i>Laboratorium Biologi</span>
+            <span class="fchip"><i class="ph-fill ph-atom"></i>Laboratorium Fisika</span>
+            <span class="fchip"><i class="ph-fill ph-desktop"></i>Laboratorium Komputer</span>
+            <span class="fchip"><i class="ph-fill ph-barbell"></i>Sport Center Edmund Campion</span>
+            <span class="fchip"><i class="ph-fill ph-soccer-ball"></i>Lapangan Sepak Bola</span>
+            <span class="fchip"><i class="ph-fill ph-basketball"></i>Lapangan Basket dan Voli</span>
+            <span class="fchip"><i class="ph-fill ph-mountains"></i>Wall Climbing</span>
+          </div>
+          <div class="chip-marquee__group" aria-hidden="true">
+            <span class="fchip"><i class="ph-fill ph-dna"></i>Laboratorium Biologi</span>
+            <span class="fchip"><i class="ph-fill ph-atom"></i>Laboratorium Fisika</span>
+            <span class="fchip"><i class="ph-fill ph-desktop"></i>Laboratorium Komputer</span>
+            <span class="fchip"><i class="ph-fill ph-barbell"></i>Sport Center Edmund Campion</span>
+            <span class="fchip"><i class="ph-fill ph-soccer-ball"></i>Lapangan Sepak Bola</span>
+            <span class="fchip"><i class="ph-fill ph-basketball"></i>Lapangan Basket dan Voli</span>
+            <span class="fchip"><i class="ph-fill ph-mountains"></i>Wall Climbing</span>
+          </div>
+        </div>
+      </div>
+      <div class="chip-marquee chip-marquee--reverse" data-reveal>
+        <div class="chip-marquee__track">
+          <div class="chip-marquee__group">
+            <span class="fchip"><i class="ph-fill ph-music-notes"></i>Ruang Gamelan Soepra</span>
+            <span class="fchip"><i class="ph-fill ph-paint-brush"></i>Ruang Ekspresi</span>
+            <span class="fchip"><i class="ph-fill ph-tree"></i>Taman Faber dan Taman Xaverius</span>
+            <span class="fchip"><i class="ph-fill ph-plant"></i>Hidroponik Corner</span>
+            <span class="fchip"><i class="ph-fill ph-first-aid-kit"></i>UKS</span>
+            <span class="fchip"><i class="ph-fill ph-lock-key"></i>Loker Penyimpanan</span>
+            <span class="fchip"><i class="ph-fill ph-music-notes"></i>Ruang Gamelan Soepra</span>
+            <span class="fchip"><i class="ph-fill ph-paint-brush"></i>Ruang Ekspresi</span>
+            <span class="fchip"><i class="ph-fill ph-tree"></i>Taman Faber dan Taman Xaverius</span>
+            <span class="fchip"><i class="ph-fill ph-plant"></i>Hidroponik Corner</span>
+            <span class="fchip"><i class="ph-fill ph-first-aid-kit"></i>UKS</span>
+            <span class="fchip"><i class="ph-fill ph-lock-key"></i>Loker Penyimpanan</span>
+          </div>
+          <div class="chip-marquee__group" aria-hidden="true">
+            <span class="fchip"><i class="ph-fill ph-music-notes"></i>Ruang Gamelan Soepra</span>
+            <span class="fchip"><i class="ph-fill ph-paint-brush"></i>Ruang Ekspresi</span>
+            <span class="fchip"><i class="ph-fill ph-tree"></i>Taman Faber dan Taman Xaverius</span>
+            <span class="fchip"><i class="ph-fill ph-plant"></i>Hidroponik Corner</span>
+            <span class="fchip"><i class="ph-fill ph-first-aid-kit"></i>UKS</span>
+            <span class="fchip"><i class="ph-fill ph-lock-key"></i>Loker Penyimpanan</span>
+            <span class="fchip"><i class="ph-fill ph-music-notes"></i>Ruang Gamelan Soepra</span>
+            <span class="fchip"><i class="ph-fill ph-paint-brush"></i>Ruang Ekspresi</span>
+            <span class="fchip"><i class="ph-fill ph-tree"></i>Taman Faber dan Taman Xaverius</span>
+            <span class="fchip"><i class="ph-fill ph-plant"></i>Hidroponik Corner</span>
+            <span class="fchip"><i class="ph-fill ph-first-aid-kit"></i>UKS</span>
+            <span class="fchip"><i class="ph-fill ph-lock-key"></i>Loker Penyimpanan</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Halaman berikutnya -->
+    <section class="section section--flush-top">
+      <div class="container">
+        <a href="kegiatan.html" class="next-page" data-reveal>
+          <span><small>Halaman berikutnya</small><b>Kegiatan sekolah</b></span>
+          <span class="next-page__arrow" aria-hidden="true"><i class="ph ph-arrow-right"></i></span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="index.html" class="brand brand--light" aria-label="SMA Kolese Loyola, ke beranda">
+            <img src="assets/img/logo-loyola.png" alt="" width="42" height="53">
+            <span class="brand__text">Kolese Loyola<small>SMA &middot; SEMARANG</small></span>
+          </a>
+          <p>Sekolah Katolik Jesuit di Jalan Karanganyar 37, Semarang. Mendidik kaum muda lewat nilai Competence, Conscience, Compassion, dan Commitment sejak 1949.</p>
+          <div class="socials">
+            <a href="https://www.instagram.com/smakoleseloyola" target="_blank" rel="noopener" aria-label="Instagram SMA Kolese Loyola"><i class="ph ph-instagram-logo"></i></a>
+            <a href="https://www.youtube.com/c/SMAKoleseLoyolaSemarang" target="_blank" rel="noopener" aria-label="YouTube SMA Kolese Loyola"><i class="ph ph-youtube-logo"></i></a>
+            <a href="https://www.loyola-smg.sch.id" target="_blank" rel="noopener" aria-label="Website resmi sekolah"><i class="ph ph-globe-simple"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Jelajahi</h4>
+          <a href="index.html">Beranda</a>
+          <a href="profil.html">Profil</a>
+          <a href="prestasi.html">Prestasi</a>
+          <a href="fasilitas.html">Fasilitas</a>
+          <a href="kegiatan.html">Kegiatan</a>
+          <a href="kontak.html">Kontak</a>
+        </div>
+        <div class="footer__col">
+          <h4>Kontak</h4>
+          <p>Jl. Karanganyar No. 37<br>Semarang 50135, Jawa Tengah</p>
+          <a href="tel:+62243546945">(024) 3546945</a>
+          <a href="mailto:koleseloyola@loyola-smg.sch.id">koleseloyola@loyola-smg.sch.id</a>
+        </div>
+      </div>
+      <p class="footer__big" aria-hidden="true">Kolese Loyola</p>
+      <div class="footer__bottom">
+        <p>Ad Maiorem Dei Gloriam &middot; <span data-year>2026</span></p>
+        <p>Project portofolio oleh <a href="https://github.com/Yahya-nz" target="_blank" rel="noopener">Yahya-nz</a>, bukan website resmi sekolah. <a href="kontak.html#sumber-foto">Sumber foto</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Kembali ke atas">
+    <svg viewBox="0 0 58 58" aria-hidden="true"><circle cx="29" cy="29" r="26"></circle></svg>
+    <i class="ph ph-arrow-up"></i>
+  </button>
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/js/glightbox.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/fasilitas.js"></script>
+</body>
+</html>

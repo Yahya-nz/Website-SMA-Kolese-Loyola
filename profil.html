@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Profil | SMA Kolese Loyola Semarang</title>
+  <meta name="description" content="Sejarah SMA Kolese Loyola Semarang sejak 1949, Santo Ignatius Loyola, makna logo sekolah, dan nilai-nilai Jesuit.">
+  <meta name="theme-color" content="#522795">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Profil | SMA Kolese Loyola Semarang">
+  <meta property="og:description" content="Sejarah SMA Kolese Loyola Semarang sejak 1949, Santo Ignatius Loyola, makna logo sekolah, dan nilai-nilai Jesuit.">
+  <meta property="og:image" content="https://yahya-nz.github.io/Website-SMA-Kolese-Loyola/screenshot/01-beranda.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      var t = null;
+      d.classList.add('js');
+      try { t = localStorage.getItem('loyola-tema'); } catch (e) {}
+      if (t === 'gelap' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) d.setAttribute('data-theme', 'dark');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('no-motion');
+      try {
+        if (sessionStorage.getItem('loyola-pindah') === '1') d.classList.add('is-arriving');
+        else if (!sessionStorage.getItem('loyola-sudah')) d.classList.add('is-first');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-page="profil">
+
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <img class="preloader__logo" src="assets/img/logo-loyola.png" alt="">
+      <p class="preloader__name">SMA Kolese Loyola</p>
+      <p class="preloader__sub">Semarang &middot; sejak 1949</p>
+    </div>
+    <p class="preloader__count"><span>0</span></p>
+    <div class="preloader__bar"><i></i></div>
+  </div>
+  <div class="page-transition" aria-hidden="true"><img src="assets/img/logo-loyola.png" alt=""></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"><span>Lihat</span></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand" aria-label="SMA Kolese Loyola, ke beranda">
+        <img src="assets/img/logo-loyola.png" alt="" width="42" height="53">
+        <span class="brand__text">Kolese Loyola<small>SMA &middot; SEMARANG</small></span>
+      </a>
+      <nav class="nav" aria-label="Menu utama">
+        <span class="nav__pill" aria-hidden="true"></span>
+        <a href="index.html">Beranda</a>
+        <a href="profil.html" class="is-active" aria-current="page">Profil</a>
+        <a href="prestasi.html">Prestasi</a>
+        <a href="fasilitas.html">Fasilitas</a>
+        <a href="kegiatan.html">Kegiatan</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Ganti mode gelap atau terang"><i class="ph ph-moon"></i><i class="ph ph-sun"></i></button>
+        <a href="kontak.html" class="btn btn--primary btn--sm header-cta">Hubungi kami</a>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-hp"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="menu-hp">
+    <nav aria-label="Menu HP">
+      <a href="index.html" class="mobile-menu__link"><small>01</small>Beranda</a>
+      <a href="profil.html" class="mobile-menu__link is-active" aria-current="page"><small>02</small>Profil</a>
+      <a href="prestasi.html" class="mobile-menu__link"><small>03</small>Prestasi</a>
+      <a href="fasilitas.html" class="mobile-menu__link"><small>04</small>Fasilitas</a>
+      <a href="kegiatan.html" class="mobile-menu__link"><small>05</small>Kegiatan</a>
+      <a href="kontak.html" class="mobile-menu__link"><small>06</small>Kontak</a>
+    </nav>
+    <div class="mobile-menu__foot">
+      <p>Jl. Karanganyar No. 37, Semarang</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/smakoleseloyola" target="_blank" rel="noopener" aria-label="Instagram SMA Kolese Loyola"><i class="ph ph-instagram-logo"></i></a>
+        <a href="https://www.youtube.com/c/SMAKoleseLoyolaSemarang" target="_blank" rel="noopener" aria-label="YouTube SMA Kolese Loyola"><i class="ph ph-youtube-logo"></i></a>
+        <a href="https://www.loyola-smg.sch.id" target="_blank" rel="noopener" aria-label="Website resmi sekolah"><i class="ph ph-globe-simple"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <main id="konten">
+
+    <!-- Hero halaman -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero__box">
+          <span class="shape shape--ring" aria-hidden="true"></span>
+          <span class="shape shape--half" aria-hidden="true"></span>
+          <div>
+            <nav class="crumbs ph-anim" aria-label="Breadcrumb"><a href="index.html">Beranda</a><i class="ph ph-caret-right"></i><span>Profil</span></nav>
+            <p class="eyebrow eyebrow--light ph-anim">Profil sekolah</p>
+            <h1 class="page-title" data-split="intro">77 Tahun Mendidik <em>Kaum Muda</em></h1>
+            <p class="page-lead ph-anim">Mengenal sejarah, santo pelindung, makna logo, dan nilai-nilai yang dipegang Kolese Loyola sejak 1949.</p>
+          </div>
+          <div class="page-hero__visual">
+            <div class="page-hero__arch"><img src="assets/img/gedung-loyola.jpg" alt="Gedung depan SMA Kolese Loyola di Jalan Karanganyar"></div>
+            <div class="page-hero__chip page-hero__chip--a"><i class="ph-fill ph-calendar-blank tint-yellow"></i><span>Agustus 1949<small>Berdiri di Kalisari</small></span></div>
+            <div class="page-hero__chip page-hero__chip--b"><i class="ph-fill ph-confetti tint-purple"></i><span>75 tahun<small>dirayakan 2024</small></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Garis waktu -->
+    <section class="section" id="sejarah">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow" data-reveal>Jejak langkah</p>
+          <h2 class="title" data-split>Sejarah <span class="hl">Kolese Loyola</span></h2>
+          <p class="lead" data-reveal>Perjalanan Loyola dari sebuah sekolah di Bruderan Kalisari sampai menjadi kolese Jesuit di Jalan Karanganyar.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline__track" aria-hidden="true"><div class="timeline__fill"></div></div>
+          <div class="timeline__items">
+            <article class="tl-item">
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <div class="tl-item__card" data-reveal>
+                <span class="tl-item__year">1949</span>
+                <h3>Berdiri sebagai Canisius VHO</h3>
+                <p>Agustus 1949, Pater Jan van Waayenburg, SJ mendirikan SMA Canisius VHO, sekolah persiapan menuju perguruan tinggi, di Bruderan Kalisari, Semarang.</p>
+              </div>
+            </article>
+            <article class="tl-item">
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <div class="tl-item__card" data-reveal>
+                <span class="tl-item__year">1950</span>
+                <h3>Menjadi Kolese Loyola</h3>
+                <p>Sekolah pindah ke Jalan Karanganyar dan memakai nama Kolese Loyola. Kelas putra disebut Loyola Putra, sedangkan kelas putri pindah ke Bangkong dan dikelola para suster Fransiskan.</p>
+              </div>
+            </article>
+            <article class="tl-item">
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <div class="tl-item__card" data-reveal>
+                <span class="tl-item__year">1962</span>
+                <h3>Lahirnya KEKL</h3>
+                <p>Pada 27 Desember 1962 para alumni membentuk KEKL (Keluarga Eks Kolese Loyola), wadah persaudaraan alumni Loyola.</p>
+              </div>
+            </article>
+            <article class="tl-item">
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <div class="tl-item__card" data-reveal>
+                <span class="tl-item__year">1968</span>
+                <h3>Loyola I dan Loyola II</h3>
+                <p>Mulai 1 Agustus 1968 bagian putra dan putri resmi menjadi dua sekolah, Loyola I dan Loyola II. Pada tahun yang sama Kolese Loyola resmi menerima siswi mulai kelas 1.</p>
+              </div>
+            </article>
+            <article class="tl-item">
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <div class="tl-item__card" data-reveal>
+                <span class="tl-item__year">1982</span>
+                <h3>Lahirnya SMA Sedes Sapientiae</h3>
+                <p>Sejak 1 Februari 1982 Loyola II berganti nama menjadi SMA Sedes Sapientiae, sehingga pemisahan dengan Kolese Loyola menjadi sempurna.</p>
+              </div>
+            </article>
+            <article class="tl-item">
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <div class="tl-item__card" data-reveal>
+                <span class="tl-item__year">2012</span>
+                <h3>Dari 3C menjadi 4C</h3>
+                <p>Serikat Yesus menambahkan Commitment pada nilai Competence, Conscience, dan Compassion. Sejak itu dikenal nilai 4C.</p>
+              </div>
+            </article>
+            <article class="tl-item">
+              <span class="tl-item__dot" aria-hidden="true"></span>
+              <div class="tl-item__card" data-reveal>
+                <span class="tl-item__year">2024</span>
+                <h3>75 Tahun Kolese Loyola</h3>
+                <p>Kolese Loyola merayakan 75 tahun karya pendidikan (1949&ndash;2024) dan terus berkarya sampai sekarang.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Santo Ignatius dan logo -->
+    <section class="section section--tint" id="logo">
+      <div class="container ignatius">
+        <div class="logo-map" data-reveal="scale">
+          <img src="assets/img/logo-loyola-besar.png" alt="Logo SMA Kolese Loyola: perisai kuning bergaris biru berisi monogram IHS, burung merpati, pita bertuliskan Kolese Loyola, dua serigala dengan kuali, dan tulisan AMDG" loading="lazy">
+          <button class="hotspot" type="button" style="--x: 27%; --y: 27%;" data-part="ihs" aria-label="Bagian 1: IHS">1</button>
+          <button class="hotspot" type="button" style="--x: 79%; --y: 14%;" data-part="merpati" aria-label="Bagian 2: burung merpati">2</button>
+          <button class="hotspot" type="button" style="--x: 50%; --y: 50%;" data-part="pita" aria-label="Bagian 3: pita Kolese Loyola">3</button>
+          <button class="hotspot" type="button" style="--x: 72%; --y: 67%;" data-part="serigala" aria-label="Bagian 4: dua serigala dan kuali">4</button>
+          <button class="hotspot" type="button" style="--x: 50%; --y: 86%;" data-part="amdg" aria-label="Bagian 5: AMDG">5</button>
+        </div>
+        <div class="ignatius__text">
+          <p class="eyebrow" data-reveal>Santo pelindung</p>
+          <h2 class="title" data-split>Santo Ignatius Loyola</h2>
+          <p class="lead" data-reveal>Nama sekolah ini diambil dari Santo Ignatius Loyola (1491&ndash;1556), pendiri Serikat Yesus atau Jesuit. Sejak awal, para Jesuit menjadikan pendidikan sebagai salah satu karya utama. Saat Ignatius wafat pada 1556, Serikat Yesus sudah memiliki sekitar 40 kolese.</p>
+          <p data-reveal>Di Indonesia, kolese Jesuit pertama adalah Kolese Xaverius di Muntilan yang didirikan Pater Frans van Lith, SJ. Semangat yang sama kemudian hidup di Semarang lewat Kolese Loyola.</p>
+          <h3 class="subtitle" data-reveal>Membaca logo Loyola</h3>
+          <ol class="logo-parts" data-reveal>
+            <li data-part="ihs" tabindex="0"><div><b>IHS</b><span>Monogram nama Yesus yang menjadi lambang Serikat Yesus.</span></div></li>
+            <li data-part="merpati" tabindex="0"><div><b>Burung merpati</b><span>Merpati putih, simbol yang lazim dipakai untuk Roh Kudus dalam tradisi Katolik.</span></div></li>
+            <li data-part="pita" tabindex="0"><div><b>Pita Kolese Loyola</b><span>Nama sekolah pada pita biru, berpadu dengan kuning yang menjadi warna khas Loyola.</span></div></li>
+            <li data-part="serigala" tabindex="0"><div><b>Dua serigala dan kuali</b><span>Diambil dari lambang keluarga Loyola, keluarga asal Santo Ignatius.</span></div></li>
+            <li data-part="amdg" tabindex="0"><div><b>AMDG</b><span>Ad Maiorem Dei Gloriam, semboyan Serikat Yesus.</span></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kutipan -->
+    <section class="section">
+      <div class="container">
+        <figure class="quote" data-reveal="scale">
+          <i class="ph-fill ph-quotes quote__mark" aria-hidden="true"></i>
+          <blockquote>Puerilis institutio est renovatio mundi.</blockquote>
+          <figcaption>Pendidikan kaum muda adalah pembaruan dunia. <span>Juan Bonifacio, SJ (1576)</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Nilai -->
+    <section class="section section--flush-top">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow" data-reveal>Nilai-nilai Loyola</p>
+          <h2 class="title" data-split>Yang kami pegang</h2>
+        </div>
+        <div class="values">
+          <div data-reveal>
+            <article class="value-card">
+              <span class="value-card__icon tint-purple"><i class="ph-fill ph-cross"></i></span>
+              <h3>AMDG</h3>
+              <p>Ad Maiorem Dei Gloriam, artinya &ldquo;demi kemuliaan Allah yang lebih besar&rdquo;. Semboyan Serikat Yesus ini juga tertulis di logo Loyola.</p>
+            </article>
+          </div>
+          <div data-reveal>
+            <article class="value-card">
+              <span class="value-card__icon tint-green"><i class="ph-fill ph-users-three"></i></span>
+              <h3>Men and Women for Others</h3>
+              <p>Menjadi pribadi yang hidup bagi dan bersama sesama, bukan hanya untuk diri sendiri.</p>
+            </article>
+          </div>
+          <div data-reveal>
+            <article class="value-card">
+              <span class="value-card__icon tint-yellow"><i class="ph-fill ph-squares-four"></i></span>
+              <h3>Nilai 4C</h3>
+              <p>Competence, Conscience, Compassion, dan Commitment: empat nilai yang ditanamkan pada setiap siswa.</p>
+              <a href="index.html#nilai-4c" class="link-arrow">Lihat penjelasan 4C <i class="ph ph-arrow-right"></i></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Halaman berikutnya -->
+    <section class="section section--flush-top">
+      <div class="container">
+        <a href="prestasi.html" class="next-page" data-reveal>
+          <span><small>Halaman berikutnya</small><b>Prestasi siswa</b></span>
+          <span class="next-page__arrow" aria-hidden="true"><i class="ph ph-arrow-right"></i></span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="index.html" class="brand brand--light" aria-label="SMA Kolese Loyola, ke beranda">
+            <img src="assets/img/logo-loyola.png" alt="" width="42" height="53">
+            <span class="brand__text">Kolese Loyola<small>SMA &middot; SEMARANG</small></span>
+          </a>
+          <p>Sekolah Katolik Jesuit di Jalan Karanganyar 37, Semarang. Mendidik kaum muda lewat nilai Competence, Conscience, Compassion, dan Commitment sejak 1949.</p>
+          <div class="socials">
+            <a href="https://www.instagram.com/smakoleseloyola" target="_blank" rel="noopener" aria-label="Instagram SMA Kolese Loyola"><i class="ph ph-instagram-logo"></i></a>
+            <a href="https://www.youtube.com/c/SMAKoleseLoyolaSemarang" target="_blank" rel="noopener" aria-label="YouTube SMA Kolese Loyola"><i class="ph ph-youtube-logo"></i></a>
+            <a href="https://www.loyola-smg.sch.id" target="_blank" rel="noopener" aria-label="Website resmi sekolah"><i class="ph ph-globe-simple"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Jelajahi</h4>
+          <a href="index.html">Beranda</a>
+          <a href="profil.html">Profil</a>
+          <a href="prestasi.html">Prestasi</a>
+          <a href="fasilitas.html">Fasilitas</a>
+          <a href="kegiatan.html">Kegiatan</a>
+          <a href="kontak.html">Kontak</a>
+        </div>
+        <div class="footer__col">
+          <h4>Kontak</h4>
+          <p>Jl. Karanganyar No. 37<br>Semarang 50135, Jawa Tengah</p>
+          <a href="tel:+62243546945">(024) 3546945</a>
+          <a href="mailto:koleseloyola@loyola-smg.sch.id">koleseloyola@loyola-smg.sch.id</a>
+        </div>
+      </div>
+      <p class="footer__big" aria-hidden="true">Kolese Loyola</p>
+      <div class="footer__bottom">
+        <p>Ad Maiorem Dei Gloriam &middot; <span data-year>2026</span></p>
+        <p>Project portofolio oleh <a href="https://github.com/Yahya-nz" target="_blank" rel="noopener">Yahya-nz</a>, bukan website resmi sekolah. <a href="kontak.html#sumber-foto">Sumber foto</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Kembali ke atas">
+    <svg viewBox="0 0 58 58" aria-hidden="true"><circle cx="29" cy="29" r="26"></circle></svg>
+    <i class="ph ph-arrow-up"></i>
+  </button>
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/profil.js"></script>
+</body>
+</html>

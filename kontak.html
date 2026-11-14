@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Kontak | SMA Kolese Loyola Semarang</title>
+  <meta name="description" content="Alamat, telepon, email, media sosial, dan peta lokasi SMA Kolese Loyola Semarang.">
+  <meta name="theme-color" content="#522795">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kontak | SMA Kolese Loyola Semarang">
+  <meta property="og:description" content="Alamat, telepon, email, media sosial, dan peta lokasi SMA Kolese Loyola Semarang.">
+  <meta property="og:image" content="https://yahya-nz.github.io/Website-SMA-Kolese-Loyola/screenshot/01-beranda.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      var t = null;
+      d.classList.add('js');
+      try { t = localStorage.getItem('loyola-tema'); } catch (e) {}
+      if (t === 'gelap' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) d.setAttribute('data-theme', 'dark');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('no-motion');
+      try {
+        if (sessionStorage.getItem('loyola-pindah') === '1') d.classList.add('is-arriving');
+        else if (!sessionStorage.getItem('loyola-sudah')) d.classList.add('is-first');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-page="kontak">
+
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <img class="preloader__logo" src="assets/img/logo-loyola.png" alt="">
+      <p class="preloader__name">SMA Kolese Loyola</p>
+      <p class="preloader__sub">Semarang &middot; sejak 1949</p>
+    </div>
+    <p class="preloader__count"><span>0</span></p>
+    <div class="preloader__bar"><i></i></div>
+  </div>
+  <div class="page-transition" aria-hidden="true"><img src="assets/img/logo-loyola.png" alt=""></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"><span>Lihat</span></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand" aria-label="SMA Kolese Loyola, ke beranda">
+        <img src="assets/img/logo-loyola.png" alt="" width="42" height="53">
+        <span class="brand__text">Kolese Loyola<small>SMA &middot; SEMARANG</small></span>
+      </a>
+      <nav class="nav" aria-label="Menu utama">
+        <span class="nav__pill" aria-hidden="true"></span>
+        <a href="index.html">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <a href="prestasi.html">Prestasi</a>
+        <a href="fasilitas.html">Fasilitas</a>
+        <a href="kegiatan.html">Kegiatan</a>
+        <a href="kontak.html" class="is-active" aria-current="page">Kontak</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Ganti mode gelap atau terang"><i class="ph ph-moon"></i><i class="ph ph-sun"></i></button>
+        <a href="kontak.html" class="btn btn--primary btn--sm header-cta">Hubungi kami</a>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-hp"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="menu-hp">
+    <nav aria-label="Menu HP">
+      <a href="index.html" class="mobile-menu__link"><small>01</small>Beranda</a>
+      <a href="profil.html" class="mobile-menu__link"><small>02</small>Profil</a>
+      <a href="prestasi.html" class="mobile-menu__link"><small>03</small>Prestasi</a>
+      <a href="fasilitas.html" class="mobile-menu__link"><small>04</small>Fasilitas</a>
+      <a href="kegiatan.html" class="mobile-menu__link"><small>05</small>Kegiatan</a>
+      <a href="kontak.html" class="mobile-menu__link is-active" aria-current="page"><small>06</small>Kontak</a>
+    </nav>
+    <div class="mobile-menu__foot">
+      <p>Jl. Karanganyar No. 37, Semarang</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/smakoleseloyola" target="_blank" rel="noopener" aria-label="Instagram SMA Kolese Loyola"><i class="ph ph-instagram-logo"></i></a>
+        <a href="https://www.youtube.com/c/SMAKoleseLoyolaSemarang" target="_blank" rel="noopener" aria-label="YouTube SMA Kolese Loyola"><i class="ph ph-youtube-logo"></i></a>
+        <a href="https://www.loyola-smg.sch.id" target="_blank" rel="noopener" aria-label="Website resmi sekolah"><i class="ph ph-globe-simple"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <main id="konten">
+
+    <!-- Hero halaman -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero__box">
+          <span class="shape shape--ring" aria-hidden="true"></span>
+          <span class="shape shape--half" aria-hidden="true"></span>
+          <div>
+            <nav class="crumbs ph-anim" aria-label="Breadcrumb"><a href="index.html">Beranda</a><i class="ph ph-caret-right"></i><span>Kontak</span></nav>
+            <p class="eyebrow eyebrow--light ph-anim">Kontak dan lokasi</p>
+            <h1 class="page-title" data-split="intro">Mari Terhubung dengan <em>Loyola</em></h1>
+            <p class="page-lead ph-anim">Punya pertanyaan tentang SMA Kolese Loyola? Hubungi sekolah lewat kontak resmi di bawah ini atau datang langsung ke Jalan Karanganyar 37.</p>
+          </div>
+          <div class="page-hero__visual">
+            <div class="page-hero__arch page-hero__arch--logo"><img src="assets/img/logo-loyola-besar.png" alt="Logo SMA Kolese Loyola"></div>
+            <div class="page-hero__chip page-hero__chip--a"><i class="ph-fill ph-phone tint-yellow"></i><span>(024) 3546945<small>telepon sekolah</small></span></div>
+            <div class="page-hero__chip page-hero__chip--b"><i class="ph-fill ph-instagram-logo tint-purple"></i><span>@smakoleseloyola<small>Instagram resmi</small></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kartu kontak -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow" data-reveal>Kontak resmi</p>
+          <h2 class="title" data-split>Pilih cara yang <span class="hl">paling nyaman</span></h2>
+        </div>
+        <div class="contact-grid">
+          <div data-reveal>
+            <article class="contact-card">
+              <span class="contact-card__icon tint-purple"><i class="ph-fill ph-map-pin"></i></span>
+              <h3>Alamat</h3>
+              <p>Jl. Karanganyar No. 37<br>Semarang 50135, Jawa Tengah</p>
+              <div class="contact-card__actions">
+                <a class="mini-btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=-6.981904,110.4262363" target="_blank" rel="noopener"><i class="ph ph-navigation-arrow"></i>Lihat rute</a>
+                <button class="mini-btn" type="button" data-copy="Jl. Karanganyar No. 37, Semarang 50135" data-copy-msg="Alamat disalin"><i class="ph ph-copy"></i>Salin</button>
+              </div>
+            </article>
+          </div>
+          <div data-reveal>
+            <article class="contact-card">
+              <span class="contact-card__icon tint-orange"><i class="ph-fill ph-phone"></i></span>
+              <h3>Telepon</h3>
+              <p>(024) 3546945<br>(024) 3548431</p>
+              <div class="contact-card__actions">
+                <a class="mini-btn" href="tel:+62243546945"><i class="ph ph-phone-call"></i>Telepon</a>
+                <button class="mini-btn" type="button" data-copy="(024) 3546945" data-copy-msg="Nomor telepon disalin"><i class="ph ph-copy"></i>Salin</button>
+              </div>
+            </article>
+          </div>
+          <div data-reveal>
+            <article class="contact-card">
+              <span class="contact-card__icon tint-green"><i class="ph-fill ph-envelope-simple"></i></span>
+              <h3>Email</h3>
+              <p>koleseloyola@loyola-smg.sch.id</p>
+              <div class="contact-card__actions">
+                <a class="mini-btn" href="mailto:koleseloyola@loyola-smg.sch.id"><i class="ph ph-paper-plane-tilt"></i>Kirim email</a>
+                <button class="mini-btn" type="button" data-copy="koleseloyola@loyola-smg.sch.id" data-copy-msg="Alamat email disalin"><i class="ph ph-copy"></i>Salin</button>
+              </div>
+            </article>
+          </div>
+          <div data-reveal>
+            <article class="contact-card">
+              <span class="contact-card__icon tint-yellow"><i class="ph-fill ph-instagram-logo"></i></span>
+              <h3>Instagram</h3>
+              <p>@smakoleseloyola</p>
+              <div class="contact-card__actions">
+                <a class="mini-btn" href="https://www.instagram.com/smakoleseloyola" target="_blank" rel="noopener"><i class="ph ph-arrow-up-right"></i>Buka Instagram</a>
+              </div>
+            </article>
+          </div>
+          <div data-reveal>
+            <article class="contact-card">
+              <span class="contact-card__icon tint-purple"><i class="ph-fill ph-globe-simple"></i></span>
+              <h3>Website</h3>
+              <p>www.loyola-smg.sch.id</p>
+              <div class="contact-card__actions">
+                <a class="mini-btn" href="https://www.loyola-smg.sch.id" target="_blank" rel="noopener"><i class="ph ph-arrow-up-right"></i>Buka website</a>
+              </div>
+            </article>
+          </div>
+          <div data-reveal>
+            <article class="contact-card">
+              <span class="contact-card__icon tint-orange"><i class="ph-fill ph-youtube-logo"></i></span>
+              <h3>YouTube</h3>
+              <p>SMA Kolese Loyola Semarang</p>
+              <div class="contact-card__actions">
+                <a class="mini-btn" href="https://www.youtube.com/c/SMAKoleseLoyolaSemarang" target="_blank" rel="noopener"><i class="ph ph-arrow-up-right"></i>Buka YouTube</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Peta -->
+    <section class="section section--tint" id="lokasi">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow" data-reveal>Lokasi</p>
+            <h2 class="title" data-split>Temukan kami di <span class="hl">peta</span></h2>
+          </div>
+          <p class="lead" data-reveal>SMA Kolese Loyola berada di Jalan Karanganyar No. 37, Brumbungan, Semarang Tengah.</p>
+        </div>
+        <div class="map-wrap" data-reveal>
+          <div id="peta" class="map" role="region" aria-label="Peta lokasi SMA Kolese Loyola"></div>
+          <div class="map-info">
+            <h3>SMA Kolese Loyola</h3>
+            <div class="map-info__row"><i class="ph-fill ph-map-pin tint-purple"></i><p>Jl. Karanganyar No. 37, Brumbungan, Semarang Tengah, Kota Semarang 50135</p></div>
+            <div class="map-info__row"><i class="ph-fill ph-phone tint-orange"></i><p>(024) 3546945<br>(024) 3548431</p></div>
+            <div class="map-info__row"><i class="ph-fill ph-envelope-simple tint-green"></i><p>koleseloyola@loyola-smg.sch.id</p></div>
+            <a class="btn btn--primary" href="https://www.google.com/maps/search/?api=1&amp;query=SMA+Kolese+Loyola+Semarang" target="_blank" rel="noopener">Buka di Google Maps <i class="ph ph-arrow-up-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tanya jawab -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="eyebrow" data-reveal>Tanya jawab</p>
+          <h2 class="title" data-split>Pertanyaan yang sering muncul</h2>
+        </div>
+        <div class="faq">
+          <div class="faq__item" data-reveal>
+            <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-1">Apa arti 4C?<i class="ph ph-plus"></i></button>
+            <div class="faq__a" id="faq-1"><p>4C adalah nilai pendidikan Jesuit: Competence (cakap), Conscience (berhati nurani), Compassion (berbela rasa), dan Commitment (setia berjuang untuk kebaikan).</p></div>
+          </div>
+          <div class="faq__item" data-reveal>
+            <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-2">Apa itu AMDG?<i class="ph ph-plus"></i></button>
+            <div class="faq__a" id="faq-2"><p>AMDG singkatan dari Ad Maiorem Dei Gloriam, artinya &ldquo;demi kemuliaan Allah yang lebih besar&rdquo;. Ini semboyan Serikat Yesus (Jesuit) dan tertulis di logo Loyola.</p></div>
+          </div>
+          <div class="faq__item" data-reveal>
+            <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-3">Kenapa disebut &ldquo;Kolese&rdquo;?<i class="ph ph-plus"></i></button>
+            <div class="faq__a" id="faq-3"><p>Kolese (dari bahasa Latin collegium) adalah sebutan untuk sekolah yang dikelola Serikat Yesus. Di Indonesia ada beberapa kolese, misalnya Kolese Kanisius, Kolese De Britto, dan Kolese Loyola.</p></div>
+          </div>
+          <div class="faq__item" data-reveal>
+            <button class="faq__q" type="button" aria-expanded="false" aria-controls="faq-4">Bagaimana cara mendaftar ke Loyola?<i class="ph ph-plus"></i></button>
+            <div class="faq__a" id="faq-4"><p>Informasi Penerimaan Murid Baru (PMB) diumumkan di website resmi <a class="link-arrow" href="https://www.loyola-smg.sch.id" target="_blank" rel="noopener">loyola-smg.sch.id</a>. Kamu juga bisa bertanya lewat telepon atau Instagram sekolah.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sumber foto -->
+    <section class="section section--flush-top" id="sumber-foto">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-reveal>Sumber</p>
+          <h2 class="title" data-split>Sumber foto dan data</h2>
+          <p class="lead" data-reveal>Semua foto berasal dari media resmi SMA Kolese Loyola. Data sejarah, fasilitas, dan prestasi diambil dari website resmi sekolah.</p>
+        </div>
+        <div class="table-wrap" data-reveal>
+          <table class="src-table">
+            <thead>
+              <tr><th>File</th><th>Isi</th><th>Sumber</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><code>logo-loyola.png</code> <code>logo-loyola-besar.png</code></td><td>Logo SMA Kolese Loyola</td><td>Logo resmi sekolah</td></tr>
+              <tr><td><code>gedung-loyola.jpg</code></td><td>Gedung depan sekolah</td><td>Website resmi loyola-smg.sch.id</td></tr>
+              <tr><td><code>lsc.jpg</code> <code>kapel.jpg</code> <code>aula-belarminus.jpg</code> <code>lab-kimia.jpg</code> <code>ruang-cinema.jpg</code> <code>ruang-kelas.jpg</code> <code>kantin.jpg</code></td><td>Fasilitas sekolah</td><td>Website resmi loyola-smg.sch.id (halaman Fasilitas)</td></tr>
+              <tr><td><code>osn-informatika.webp</code> <code>bidikti-2023.jpg</code> <code>natal.jpg</code></td><td>Poster prestasi dan kegiatan</td><td>Instagram resmi @smakoleseloyola</td></tr>
+              <tr><td><code>basket-dbl.jpg</code> <code>paduan-suara.jpg</code> <code>soepra-fest.jpg</code> <code>dkkl.jpg</code></td><td>Prestasi dan kegiatan siswa</td><td>Instagram resmi @smakoleseloyola</td></tr>
+              <tr><td><code>classmeeting.jpg</code> <code>malam-sosialisasi.jpg</code></td><td>Kegiatan siswa</td><td>Dokumentasi Moment Hunter, Instagram resmi @smakoleseloyola</td></tr>
+              <tr><td>Peta</td><td>Peta lokasi sekolah</td><td>&copy; OpenStreetMap contributors, ditampilkan dengan Leaflet</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kembali ke beranda -->
+    <section class="section">
+      <div class="container">
+        <a href="index.html" class="next-page" data-reveal>
+          <span><small>Selesai menjelajah?</small><b>Kembali ke beranda</b></span>
+          <span class="next-page__arrow" aria-hidden="true"><i class="ph ph-house"></i></span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="index.html" class="brand brand--light" aria-label="SMA Kolese Loyola, ke beranda">
+            <img src="assets/img/logo-loyola.png" alt="" width="42" height="53">
+            <span class="brand__text">Kolese Loyola<small>SMA &middot; SEMARANG</small></span>
+          </a>
+          <p>Sekolah Katolik Jesuit di Jalan Karanganyar 37, Semarang. Mendidik kaum muda lewat nilai Competence, Conscience, Compassion, dan Commitment sejak 1949.</p>
+          <div class="socials">
+            <a href="https://www.instagram.com/smakoleseloyola" target="_blank" rel="noopener" aria-label="Instagram SMA Kolese Loyola"><i class="ph ph-instagram-logo"></i></a>
+            <a href="https://www.youtube.com/c/SMAKoleseLoyolaSemarang" target="_blank" rel="noopener" aria-label="YouTube SMA Kolese Loyola"><i class="ph ph-youtube-logo"></i></a>
+            <a href="https://www.loyola-smg.sch.id" target="_blank" rel="noopener" aria-label="Website resmi sekolah"><i class="ph ph-globe-simple"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Jelajahi</h4>
+          <a href="index.html">Beranda</a>
+          <a href="profil.html">Profil</a>
+          <a href="prestasi.html">Prestasi</a>
+          <a href="fasilitas.html">Fasilitas</a>
+          <a href="kegiatan.html">Kegiatan</a>
+          <a href="kontak.html">Kontak</a>
+        </div>
+        <div class="footer__col">
+          <h4>Kontak</h4>
+          <p>Jl. Karanganyar No. 37<br>Semarang 50135, Jawa Tengah</p>
+          <a href="tel:+62243546945">(024) 3546945</a>
+          <a href="mailto:koleseloyola@loyola-smg.sch.id">koleseloyola@loyola-smg.sch.id</a>
+        </div>
+      </div>
+      <p class="footer__big" aria-hidden="true">Kolese Loyola</p>
+      <div class="footer__bottom">
+        <p>Ad Maiorem Dei Gloriam &middot; <span data-year>2026</span></p>
+        <p>Project portofolio oleh <a href="https://github.com/Yahya-nz" target="_blank" rel="noopener">Yahya-nz</a>, bukan website resmi sekolah. <a href="kontak.html#sumber-foto">Sumber foto</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Kembali ke atas">
+    <svg viewBox="0 0 58 58" aria-hidden="true"><circle cx="29" cy="29" r="26"></circle></svg>
+    <i class="ph ph-arrow-up"></i>
+  </button>
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/kontak.js"></script>
+</body>
+</html>

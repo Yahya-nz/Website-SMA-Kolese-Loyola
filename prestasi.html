@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Prestasi | SMA Kolese Loyola Semarang</title>
+  <meta name="description" content="Prestasi siswa SMA Kolese Loyola Semarang di bidang akademik, olahraga, seni, bahasa, sains, dan wirausaha.">
+  <meta name="theme-color" content="#522795">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Prestasi | SMA Kolese Loyola Semarang">
+  <meta property="og:description" content="Prestasi siswa SMA Kolese Loyola Semarang di bidang akademik, olahraga, seni, bahasa, sains, dan wirausaha.">
+  <meta property="og:image" content="https://yahya-nz.github.io/Website-SMA-Kolese-Loyola/screenshot/01-beranda.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      var t = null;
+      d.classList.add('js');
+      try { t = localStorage.getItem('loyola-tema'); } catch (e) {}
+      if (t === 'gelap' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) d.setAttribute('data-theme', 'dark');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('no-motion');
+      try {
+        if (sessionStorage.getItem('loyola-pindah') === '1') d.classList.add('is-arriving');
+        else if (!sessionStorage.getItem('loyola-sudah')) d.classList.add('is-first');
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-page="prestasi">
+
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <img class="preloader__logo" src="assets/img/logo-loyola.png" alt="">
+      <p class="preloader__name">SMA Kolese Loyola</p>
+      <p class="preloader__sub">Semarang &middot; sejak 1949</p>
+    </div>
+    <p class="preloader__count"><span>0</span></p>
+    <div class="preloader__bar"><i></i></div>
+  </div>
+  <div class="page-transition" aria-hidden="true"><img src="assets/img/logo-loyola.png" alt=""></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"><span>Lihat</span></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand" aria-label="SMA Kolese Loyola, ke beranda">
+        <img src="assets/img/logo-loyola.png" alt="" width="42" height="53">
+        <span class="brand__text">Kolese Loyola<small>SMA &middot; SEMARANG</small></span>
+      </a>
+      <nav class="nav" aria-label="Menu utama">
+        <span class="nav__pill" aria-hidden="true"></span>
+        <a href="index.html">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <a href="prestasi.html" class="is-active" aria-current="page">Prestasi</a>
+        <a href="fasilitas.html">Fasilitas</a>
+        <a href="kegiatan.html">Kegiatan</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Ganti mode gelap atau terang"><i class="ph ph-moon"></i><i class="ph ph-sun"></i></button>
+        <a href="kontak.html" class="btn btn--primary btn--sm header-cta">Hubungi kami</a>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false" aria-controls="menu-hp"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="menu-hp">
+    <nav aria-label="Menu HP">
+      <a href="index.html" class="mobile-menu__link"><small>01</small>Beranda</a>
+      <a href="profil.html" class="mobile-menu__link"><small>02</small>Profil</a>
+      <a href="prestasi.html" class="mobile-menu__link is-active" aria-current="page"><small>03</small>Prestasi</a>
+      <a href="fasilitas.html" class="mobile-menu__link"><small>04</small>Fasilitas</a>
+      <a href="kegiatan.html" class="mobile-menu__link"><small>05</small>Kegiatan</a>
+      <a href="kontak.html" class="mobile-menu__link"><small>06</small>Kontak</a>
+    </nav>
+    <div class="mobile-menu__foot">
+      <p>Jl. Karanganyar No. 37, Semarang</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/smakoleseloyola" target="_blank" rel="noopener" aria-label="Instagram SMA Kolese Loyola"><i class="ph ph-instagram-logo"></i></a>
+        <a href="https://www.youtube.com/c/SMAKoleseLoyolaSemarang" target="_blank" rel="noopener" aria-label="YouTube SMA Kolese Loyola"><i class="ph ph-youtube-logo"></i></a>
+        <a href="https://www.loyola-smg.sch.id" target="_blank" rel="noopener" aria-label="Website resmi sekolah"><i class="ph ph-globe-simple"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <main id="konten">
+
+    <!-- Hero halaman -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero__box">
+          <span class="shape shape--ring" aria-hidden="true"></span>
+          <span class="shape shape--half" aria-hidden="true"></span>
+          <div>
+            <nav class="crumbs ph-anim" aria-label="Breadcrumb"><a href="index.html">Beranda</a><i class="ph ph-caret-right"></i><span>Prestasi</span></nav>
+            <p class="eyebrow eyebrow--light ph-anim">Prestasi siswa</p>
+            <h1 class="page-title" data-split="intro">Bangga dengan <em>Prestasi</em> Loyola</h1>
+            <p class="page-lead ph-anim">Siswa Loyola terus berprestasi di bidang akademik, olahraga, dan seni, dari tingkat provinsi, nasional, sampai panggung internasional.</p>
+          </div>
+          <div class="page-hero__visual">
+            <div class="page-hero__arch"><img src="assets/img/basket-dbl.jpg" alt="Tim basket putri Loyola bersama suporter di ajang Honda DBL"></div>
+            <div class="page-hero__chip page-hero__chip--a"><i class="ph-fill ph-trophy tint-yellow"></i><span>Fantastic Four<small>Honda DBL</small></span></div>
+            <div class="page-hero__chip page-hero__chip--b"><i class="ph-fill ph-medal tint-purple"></i><span>Medali Perak<small>OSN Informatika</small></span></div>
+          </div>
+        </div>
+        <div class="stat-band">
+          <div class="stat" data-reveal><i class="ph-fill ph-trophy tint-yellow"></i><span><b data-count="10">10</b>prestasi pilihan</span></div>
+          <div class="stat" data-reveal><i class="ph-fill ph-squares-four tint-purple"></i><span><b data-count="6">6</b>bidang lomba</span></div>
+          <div class="stat" data-reveal><i class="ph-fill ph-globe-hemisphere-east tint-green"></i><span><b data-count="3">3</b>tingkat: provinsi, nasional, internasional</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sorotan -->
+    <section class="section">
+      <div class="container highlight">
+        <div class="highlight__slider" data-reveal="scale">
+          <div class="swiper hl-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="assets/img/osn-informatika.webp" alt="Poster ucapan selamat untuk Sakka Kosallananda, peraih medali perak OSN bidang Informatika"></div>
+              <div class="swiper-slide"><img src="assets/img/basket-dbl.jpg" alt="Tim basket putri Loyola dengan papan Fantastic Four Honda DBL" loading="lazy"></div>
+              <div class="swiper-slide"><img src="assets/img/paduan-suara.jpg" alt="Paduan Suara Loyola di panggung Penabur International Choir Festival 2024" loading="lazy"></div>
+            </div>
+          </div>
+        </div>
+        <div class="highlight__info">
+          <p class="eyebrow" data-reveal>Sorotan prestasi</p>
+          <div class="hl-details" data-reveal aria-live="polite">
+            <div class="hl-detail is-active">
+              <span class="badge tint-purple"><i class="ph-fill ph-graduation-cap"></i>Akademik</span>
+              <p class="hl-detail__meta"><i class="ph-fill ph-medal"></i>Tingkat Nasional &middot; 2025</p>
+              <h2>Medali Perak OSN Informatika</h2>
+              <p>Sakka Kosallananda (XI-I) meraih medali perak Olimpiade Sains Nasional (OSN) bidang Informatika. Ia didampingi Bapak Doohan Kristiawan dan dimentori kakak kelasnya, Matthew Hutama Pramana (XII-H).</p>
+            </div>
+            <div class="hl-detail">
+              <span class="badge tint-orange"><i class="ph-fill ph-basketball"></i>Olahraga</span>
+              <p class="hl-detail__meta"><i class="ph-fill ph-trophy"></i>Honda DBL &middot; Empat besar</p>
+              <h2>Basket Putri Tembus Fantastic Four</h2>
+              <p>Tim basket putri Loyola melaju sampai babak Fantastic Four (empat besar) Honda DBL, didukung banyak suporter Loyola yang memenuhi tribun.</p>
+            </div>
+            <div class="hl-detail">
+              <span class="badge tint-green"><i class="ph-fill ph-music-notes"></i>Seni</span>
+              <p class="hl-detail__meta"><i class="ph-fill ph-globe-hemisphere-east"></i>Internasional &middot; 9&ndash;14 September 2024</p>
+              <h2>Paduan Suara di Panggung Internasional</h2>
+              <p>Paduan Suara Loyola tampil di Penabur International Choir Festival (PICF) 2024 di Jakarta, festival paduan suara tingkat internasional.</p>
+            </div>
+          </div>
+          <div class="hl-nav" data-reveal>
+            <button class="round-btn hl-prev" type="button" aria-label="Prestasi sebelumnya"><i class="ph ph-arrow-left"></i></button>
+            <span class="hl-count"><b>01</b> / 03</span>
+            <button class="round-btn hl-next" type="button" aria-label="Prestasi berikutnya"><i class="ph ph-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Daftar prestasi -->
+    <section class="section section--tint" id="daftar">
+      <div class="container">
+        <div class="section-head section-head--split">
+          <div>
+            <p class="eyebrow" data-reveal>Daftar prestasi</p>
+            <h2 class="title" data-split>Prestasi terbaru <span class="hl">2025&ndash;2026</span></h2>
+          </div>
+          <p class="lead" data-reveal>Pilih bidang atau ketik nama siswa dan lomba untuk menyaring daftar.</p>
+        </div>
+        <div class="toolbar" data-reveal>
+          <div class="filters" role="group" aria-label="Filter bidang">
+            <button class="filter is-active" type="button" data-filter="semua">Semua</button>
+            <button class="filter" type="button" data-filter="akademik">Akademik</button>
+            <button class="filter" type="button" data-filter="bahasa">Bahasa</button>
+            <button class="filter" type="button" data-filter="sains">Sains</button>
+            <button class="filter" type="button" data-filter="seni">Seni</button>
+            <button class="filter" type="button" data-filter="wirausaha">Wirausaha</button>
+          </div>
+          <label class="search"><i class="ph ph-magnifying-glass"></i><input type="search" placeholder="Cari nama atau lomba" aria-label="Cari prestasi"></label>
+        </div>
+        <div class="award-grid" data-reveal>
+          <article class="award" data-bidang="seni">
+            <div class="award__date tint-orange"><b>Agu</b><span>2026</span></div>
+            <div>
+              <span class="badge tint-orange">Seni</span>
+              <h3>Juara 1 Lomba Lukis LPSK Jawa Tengah</h3>
+              <p><i class="ph ph-user"></i>Kenzo Ebeneezer Yu</p>
+            </div>
+          </article>
+          <article class="award" data-bidang="akademik">
+            <div class="award__date tint-purple"><b>Jun</b><span>2026</span></div>
+            <div>
+              <span class="badge tint-purple">Akademik</span>
+              <h3>Lolos Pembinaan Tahap 2 International Olympiad in Artificial Intelligence (IOAI)</h3>
+              <p><i class="ph ph-user"></i>Matthew Hutama Pramana (XII-H)</p>
+            </div>
+          </article>
+          <article class="award" data-bidang="bahasa">
+            <div class="award__date tint-green"><b>Jun</b><span>2026</span></div>
+            <div>
+              <span class="badge tint-green">Bahasa</span>
+              <h3>Juara 2 Lomba Debat Indonesia Bahasa Inggris tingkat Provinsi</h3>
+              <p><i class="ph ph-user"></i>Chloe Jocelyn Santoso (XI-F)</p>
+            </div>
+          </article>
+          <article class="award" data-bidang="sains">
+            <div class="award__date tint-yellow"><b>Mei</b><span>2026</span></div>
+            <div>
+              <span class="badge tint-yellow">Sains</span>
+              <h3>Juara 1 dan Juara 3 Lomba Peneliti Belia (PUTech)</h3>
+              <p><i class="ph ph-users-three"></i>Tim peneliti Loyola</p>
+            </div>
+          </article>
+          <article class="award" data-bidang="bahasa">
+            <div class="award__date tint-green"><b>Mei</b><span>2026</span></div>
+            <div>
+              <span class="badge tint-green">Bahasa</span>
+              <h3>Juara 1 Storytelling Festifla, Soegijapranata Catholic University</h3>
+              <p><i class="ph ph-user"></i>Kalinda Pramesthi Saputra (X-F)</p>
+            </div>
+          </article>
+          <article class="award" data-bidang="wirausaha">
+            <div class="award__date tint-purple"><b>Apr</b><span>2026</span></div>
+            <div>
+              <span class="badge tint-purple">Wirausaha</span>
+              <h3>The Best Student Company Wilayah 1</h3>
+              <p><i class="ph ph-users-three"></i>Arthakara Student Company</p>
+            </div>
+          </article>
+          <article class="award" data-bidang="seni">
+            <div class="award__date tint-orange"><b>Des</b><span>2025</span></div>
+            <div>
+              <span class="badge tint-orange">Seni</span>
+              <h3>Juara 3 dan Juara Favorit Lomba Poster Sejarah Gelora Historia UNY</h3>
+              <p><i class="ph ph-user"></i>Eleora Jesse Angelica Francis (XI-B)</p>
+            </div>
+          </article>
+        </div>
+        <p class="empty-state" hidden><i class="ph ph-magnifying-glass"></i>Belum ada prestasi yang cocok dengan pencarianmu.</p>
+        <p class="note"><i class="ph ph-info"></i>Sumber data: website resmi loyola-smg.sch.id (halaman Prestasi).</p>
+      </div>
+    </section>
+
+    <!-- Halaman berikutnya -->
+    <section class="section">
+      <div class="container">
+        <a href="fasilitas.html" class="next-page" data-reveal>
+          <span><small>Halaman berikutnya</small><b>Fasilitas sekolah</b></span>
+          <span class="next-page__arrow" aria-hidden="true"><i class="ph ph-arrow-right"></i></span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a href="index.html" class="brand brand--light" aria-label="SMA Kolese Loyola, ke beranda">
+            <img src="assets/img/logo-loyola.png" alt="" width="42" height="53">
+            <span class="brand__text">Kolese Loyola<small>SMA &middot; SEMARANG</small></span>
+          </a>
+          <p>Sekolah Katolik Jesuit di Jalan Karanganyar 37, Semarang. Mendidik kaum muda lewat nilai Competence, Conscience, Compassion, dan Commitment sejak 1949.</p>
+          <div class="socials">
+            <a href="https://www.instagram.com/smakoleseloyola" target="_blank" rel="noopener" aria-label="Instagram SMA Kolese Loyola"><i class="ph ph-instagram-logo"></i></a>
+            <a href="https://www.youtube.com/c/SMAKoleseLoyolaSemarang" target="_blank" rel="noopener" aria-label="YouTube SMA Kolese Loyola"><i class="ph ph-youtube-logo"></i></a>
+            <a href="https://www.loyola-smg.sch.id" target="_blank" rel="noopener" aria-label="Website resmi sekolah"><i class="ph ph-globe-simple"></i></a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4>Jelajahi</h4>
+          <a href="index.html">Beranda</a>
+          <a href="profil.html">Profil</a>
+          <a href="prestasi.html">Prestasi</a>
+          <a href="fasilitas.html">Fasilitas</a>
+          <a href="kegiatan.html">Kegiatan</a>
+          <a href="kontak.html">Kontak</a>
+        </div>
+        <div class="footer__col">
+          <h4>Kontak</h4>
+          <p>Jl. Karanganyar No. 37<br>Semarang 50135, Jawa Tengah</p>
+          <a href="tel:+62243546945">(024) 3546945</a>
+          <a href="mailto:koleseloyola@loyola-smg.sch.id">koleseloyola@loyola-smg.sch.id</a>
+        </div>
+      </div>
+      <p class="footer__big" aria-hidden="true">Kolese Loyola</p>
+      <div class="footer__bottom">
+        <p>Ad Maiorem Dei Gloriam &middot; <span data-year>2026</span></p>
+        <p>Project portofolio oleh <a href="https://github.com/Yahya-nz" target="_blank" rel="noopener">Yahya-nz</a>, bukan website resmi sekolah. <a href="kontak.html#sumber-foto">Sumber foto</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Kembali ke atas">
+    <svg viewBox="0 0 58 58" aria-hidden="true"><circle cx="29" cy="29" r="26"></circle></svg>
+    <i class="ph ph-arrow-up"></i>
+  </button>
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/Flip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/prestasi.js"></script>
+</body>
+</html>
