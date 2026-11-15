@@ -14,13 +14,13 @@ Catatan: ini project portofolio, bukan website resmi sekolah. Info resmi ada di 
 
 **Beranda**
 
-Judul besar dengan coretan kuning, foto gedung di bingkai lengkung, kartu-kartu yang melayang, dan lencana AMDG yang muter pelan. Pas pertama kali dibuka ada animasi pembuka dengan logo sekolah.
+Judul besar dengan coretan kuning dan foto gedung sekolah di bingkai lengkung. Pas pertama kali dibuka ada animasi pembuka dengan logo sekolah.
 
 ![Beranda](screenshot/01-beranda.png)
 
 **Nilai 4C**
 
-Dua pita berjalan yang saling silang, lalu empat kartu Competence, Conscience, Compassion, dan Commitment yang ikut miring kalau disorot kursor.
+Empat kartu Competence, Conscience, Compassion, dan Commitment yang ikut miring kalau disorot kursor.
 
 ![Nilai 4C](screenshot/02-nilai-4c.png)
 
@@ -80,7 +80,7 @@ Menu berubah jadi tombol yang membuka menu layar penuh. Kegiatan yang tadinya be
 - Scroll halus, bar progres di atas layar, dan tombol kembali ke atas dengan lingkaran progres.
 - Judul yang muncul per baris, elemen yang muncul saat di-scroll, angka yang ngitung naik, dan efek parallax di foto.
 - Header yang ngumpet waktu scroll ke bawah dan muncul lagi waktu scroll ke atas.
-- Kursor bulat yang ngikutin mouse dan tombol yang ketarik sedikit ke arah kursor (khusus laptop dan PC).
+- Tombol yang ketarik sedikit ke arah kursor (khusus laptop dan PC).
 - Panel Jelajahi di beranda yang melebar pas disorot.
 - Garis waktu sejarah dan logo sekolah dengan titik penjelasan.
 - Kartu prestasi bertumpuk, filter bidang, dan pencarian.

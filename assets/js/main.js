@@ -386,31 +386,6 @@
     });
   }
 
-  // kursor bulat yang mengikuti mouse
-  function initCursor() {
-    if (!anim || !finePointer) return;
-    const dot = $('.cursor');
-    const ringEl = $('.cursor-ring');
-    if (!dot || !ringEl) return;
-    html.classList.add('has-cursor');
-    gsap.set([dot, ringEl], { xPercent: -50, yPercent: -50, x: -200, y: -200 });
-    const dx = gsap.quickTo(dot, 'x', { duration: 0.12, ease: 'power3' });
-    const dy = gsap.quickTo(dot, 'y', { duration: 0.12, ease: 'power3' });
-    const rx = gsap.quickTo(ringEl, 'x', { duration: 0.55, ease: 'power3' });
-    const ry = gsap.quickTo(ringEl, 'y', { duration: 0.55, ease: 'power3' });
-    window.addEventListener('pointermove', (e) => {
-      dx(e.clientX); dy(e.clientY); rx(e.clientX); ry(e.clientY);
-    }, { passive: true });
-    document.addEventListener('pointerover', (e) => {
-      const view = e.target.closest('[data-cursor="lihat"]');
-      const hot = e.target.closest('a, button, input, label, [data-cursor]');
-      body.classList.toggle('cursor-view', !!view);
-      body.classList.toggle('cursor-hover', !!hot && !view);
-    });
-    document.documentElement.addEventListener('mouseleave', () => gsap.to([dot, ringEl], { autoAlpha: 0, duration: 0.3 }));
-    document.documentElement.addEventListener('mouseenter', () => gsap.to([dot, ringEl], { autoAlpha: 1, duration: 0.3 }));
-  }
-
   function initTilt() {
     if (!anim || !finePointer || !window.VanillaTilt) return;
     VanillaTilt.init($$('[data-tilt]'), { max: 7, speed: 900, glare: true, 'max-glare': 0.14, scale: 1.02 });
@@ -430,25 +405,16 @@
     if (!hero || !anim) return;
     const items = $$('.ph-anim', hero);
     const arch = $('.page-hero__arch', hero);
-    const chips = $$('.page-hero__chip', hero);
-    const shapes = $$('.shape', hero);
     gsap.set(items, { autoAlpha: 0, y: 34 });
     if (arch) gsap.set(arch, { clipPath: 'inset(100% 0% 0% 0%)' });
-    gsap.set(chips, { autoAlpha: 0, scale: 0.6 });
-    gsap.set(shapes, { scale: 0 });
     Site.onReady(() => {
       const tl = gsap.timeline();
       tl.to(items, { autoAlpha: 1, y: 0, duration: 1, stagger: 0.08 }, 0.1);
       if (arch) {
-        tl.to(arch, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.4, ease: 'power4.out' }, 0.15);
+        tl.to(arch, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.4, ease: 'power4.out', onComplete: () => gsap.set(arch, { clipPath: 'none' }) }, 0.15);
         const img = $('img', arch);
         if (img) tl.from(img, { scale: 1.35, duration: 1.8 }, 0.15);
       }
-      tl.to(shapes, { scale: 1, duration: 1.1, ease: 'back.out(1.6)', stagger: 0.1 }, 0.5);
-      tl.to(chips, { autoAlpha: 1, scale: 1, duration: 0.9, ease: 'back.out(1.8)', stagger: 0.14 }, 0.75);
-      chips.forEach((c, i) => {
-        tl.to(c, { y: i % 2 ? 10 : -10, duration: 2.4 + i * 0.5, ease: 'sine.inOut', yoyo: true, repeat: -1 }, '>');
-      });
     });
   }
 
@@ -555,7 +521,6 @@
   initCounters();
   initParallax();
   initMagnetic();
-  initCursor();
   initTilt();
   initLightbox();
   initPageHero();
